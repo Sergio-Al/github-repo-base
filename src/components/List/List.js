@@ -26,8 +26,8 @@ export default function List({ items, title }) {
     <>
       <Title>{title}</Title>
       <ListWrapper>
-        {items.map((item) => (
-          <ListItem key="label">
+        {items.map((item, i) => (
+          <ListItem key={i}>
             <Label>{item.label}</Label>{" "}
             {item.value ? item.value : "Not Specified"}
           </ListItem>
